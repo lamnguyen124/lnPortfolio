@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {NavService} from '../services/nav-service.service';
 
 @Component({
@@ -7,6 +7,7 @@ import {NavService} from '../services/nav-service.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  @Output() selectedTab = new EventEmitter<any>();
 
   constructor(public navService: NavService) {
   }
@@ -14,8 +15,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleButton() {
-    this.navService.emitData();
+  toggleButton(selection: string) {
+    this.navService.emitData(selection);
+  }
+
+  setSelectedTab(tab: any) {
+    this.selectedTab.emit(tab);
   }
 
 }

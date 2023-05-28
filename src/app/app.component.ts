@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {NavService} from './services/nav-service.service';
 import {Inject} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
@@ -10,6 +10,7 @@ import {PageScrollService} from 'ngx-page-scroll-core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  selectedTab: any;
   active = 1;
   title = 'Lam\'s Portfolio';
   aboutSelected = false;
@@ -22,6 +23,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(' body selection: ', this.navService.bodyToggleState$);
+    console.log(' about selection: ', this.navService.aboutToggleState$);
   }
 
   onScroll(event: HTMLElement, i: number) {
@@ -31,5 +34,9 @@ export class AppComponent implements OnInit {
     });
 
     this.active = i;
+  }
+
+  onTabSelected(tab: any) {
+    this.selectedTab = tab;
   }
 }

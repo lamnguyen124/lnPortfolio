@@ -17,6 +17,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import {ReactiveFormsModule} from "@angular/forms";
 import { AboutComponent } from './about/about.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -27,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     BodyComponent,
     SocialsComponent,
     SidenavComponent,
-    AboutComponent
+    AboutComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

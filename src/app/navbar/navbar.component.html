@@ -1,19 +1,30 @@
-<div class="collapse" id="navbarToggleExternalContent">
-  <div class="bg-dark p-4">
-    <button (click)="toggleButton()"><h5 class="text-white h4">.About..</h5></button>
-    <h5 class="text-white h4">.Contact..</h5>
-    <h5 class="text-white h4">.Experience..</h5>
-    <span class="text-muted">Ready, set, Build!!</span>
-  </div>
-</div>
-<nav class="navbar navbar-dark bg-dark">
-  <div class="container-fluid d-flex flex-row-reverse">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
-            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<!--<div id="navbarToggleExternalContent">-->
+<!--  <div class="bg-dark p-4 d-flex flex-row-reverse">-->
+<!--    <button type="button" class="btn btn-dark" (click)="toggleButton('about')" data-toggle="button" aria-pressed="false"-->
+<!--            autocomplete="off"><h5 class="text-white h4">.About..</h5>-->
+<!--    </button>-->
+<!--    <button type="button" class="btn btn-dark" (click)="toggleButton('contact')" data-toggle="button" aria-pressed="false"-->
+<!--            autocomplete="off"><h5 class="text-white h4">.Contact..</h5>-->
+<!--    </button>-->
+<!--    <button type="button" class="btn btn-dark" (click)="toggleButton('experience')" data-toggle="button" aria-pressed="false"-->
+<!--            autocomplete="off"><h5 class="text-white h4">.Experience..</h5>-->
+<!--    </button>-->
+<!--  </div>-->
+
+
+<div id="navbarToggleExternalContent">
+  <div class="bg-dark p-4 d-flex flex-row-reverse">
+    <button type="button" class="btn btn-dark" (click)="setSelectedTab('about')" data-toggle="button"
+            aria-pressed="false"
+            autocomplete="off"><h5 class="text-white h4">.About..</h5>
+    </button>
+    <button type="button" class="btn btn-dark" (click)="setSelectedTab('contacts')" data-toggle="button"
+            aria-pressed="false"
+            autocomplete="off"><h5 class="text-white h4">.Contacts..</h5>
+    </button>
+    <button type="button" class="btn btn-dark" (click)="setSelectedTab('experience')" data-toggle="button"
+            aria-pressed="false"
+            autocomplete="off"><h5 class="text-white h4">.Experience..</h5>
     </button>
   </div>
-</nav>
-
-
-<!--<mat-slider min="1" max="100" step="1" value="50"></mat-slider>-->
+</div>
